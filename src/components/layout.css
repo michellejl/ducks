@@ -1,0 +1,9 @@
+/* 
+ * Typography Theme: stow-lake
+ * Font Family matches the headerFontFamily
+ * Font Size matched the scaleRatio
+ */
+.siteTitle {
+  font-family: 'Neuton', 'sans-serif';
+  font-size: 2.25em;
+}
