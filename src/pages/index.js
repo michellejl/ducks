@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
+import AuthorCard from '../components/author-card'
 import Layout from '../components/layout'
 
 const IndexPage = () => (
   <Layout>
     Hello World
+    <AuthorCard />
   </Layout>
 )
 
