@@ -1,20 +1,23 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# Ducks
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
-
-## Install
-
-Make sure that you have the Gatsby CLI program installed:
+### Install dependencies:
 ```sh
-npm install --global gatsby-cli
+yarn
 ```
 
-Then you can run it by:
+### Build development environment:
+
 ```sh
-cd gatsby-example-site
 gatsby develop
 ```
 
+### Build production version:
+```sh
+gatsby build
+```
+
 ## Resources
+- [Gatsby2 Docs](https://next.gatsbyjs.org/)
 - [typography.js](http://kyleamathews.github.io/typography.js/)
+- [Styled-Components](https://www.styled-components.com/)
+- [Contentful Image API](https://www.contentful.com/developers/docs/references/images-api/#/reference/changing-formats/progressive-jpegs)
