@@ -9,6 +9,14 @@ const AuthorCard = () => (
           edges {
             node {
               name
+              website
+              profilePhoto {
+                file {
+                  url
+                  fileName
+                  contentType
+                }
+              }
             }
           }
         }
@@ -17,7 +25,12 @@ const AuthorCard = () => (
     render={data => (
       <header>
         {data.allContentfulAuthor.edges.map(({ node }, index) => (
-          node.name
+          <h1>
+            <a href={node.website}>
+              {node.name} | {node.website}
+            </a>
+          </h1>
+
         ))}
       </header>
     )}
