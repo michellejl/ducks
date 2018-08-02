@@ -1,26 +1,30 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { StaticQuery, graphql } from "gatsby"
 
-
-class AuthorCard extends Component {
-  author = this.props.data.allContentfulAuthor;
-  render() {
-    return (
-      <div>
-      </div>
-    )
-  }
-}
+const AuthorCard = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allContentfulAuthor {
+          edges {
+            node {
+              name
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <header>
+        {data.allContentfulAuthor.edges.map(({ node }, index) => (
+          node.name
+        ))}
+      </header>
+    )}
+  />
+)
 
 export default AuthorCard
 
-export const pageQuery = graphql`
-  query pageQuery {
-    allContentfulAuthor {
-      edges {
-        node {
-          name
-        }
-      }
-    }
-  }
-`
+
+
