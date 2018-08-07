@@ -13,8 +13,20 @@ const AuthorCard = () => (
               profilePhoto {
                 file {
                   url
-                  fileName
-                  contentType
+                }
+              }
+            }
+          }
+        }
+        allContentfulSocialMedia {
+          edges {
+            node {
+              type
+              handle
+              url
+              icon {
+                file {
+                  url
                 }
               }
             }
@@ -23,21 +35,29 @@ const AuthorCard = () => (
       }
     `}
     render={data => (
-      <header>
-        {data.allContentfulAuthor.edges.map(({ node }, index) => (
-          <h1>
-            <a href={node.website}>
-              {node.name} | {node.website}
-            </a>
-          </h1>
-
-        ))}
-      </header>
+      data.allContentfulAuthor.edges.map(({ node }, index) => (
+        <aside className="AuthorCard">
+          <img src={node.profilePhoto.file.url} alt={node.name} className="profilePhoto" />
+          <div class="author-information">
+            <h1>
+              <a key={index} href={node.website}>
+                {node.name}
+              </a>
+            </h1>
+            <ul className="socialMedia">
+              {data.allContentfulSocialMedia.edges.map(({node}, index) => (
+                <li key={index} className={`socialMediaItem ${node.type}`}>
+                  <a href={node.url}>
+                    <img src={node.icon.file.url} className={`socialMediaImg ${node.type}`} alt={`${node.type} icon`} title={node.handle} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
+      ))
     )}
   />
 )
 
 export default AuthorCard
-
-
-

@@ -11,6 +11,11 @@ yarn
 gatsby develop
 ```
 
+### Compile styles (sass)
+```sh
+sass --watch src/components/sass/layout.scss src/components/layout.css
+```
+
 ### Build production version:
 ```sh
 gatsby build
