@@ -15,12 +15,8 @@ const AuthorCard = () => (
                   url
                 }
               }
-            }
-          }
-        }
-        allContentfulSocialMedia {
-          edges {
-            node {
+              social_media {
+              id
               type
               handle
               url
@@ -33,25 +29,28 @@ const AuthorCard = () => (
           }
         }
       }
+      }
     `}
     render={data => (
       data.allContentfulAuthor.edges.map(({ node }, index) => (
         <aside className="AuthorCard">
           <img src={node.profilePhoto.file.url} alt={node.name} className="profilePhoto" />
-          <div class="author-information">
+          <div className="author-information">
             <h1>
               <a key={index} href={node.website}>
                 {node.name}
               </a>
             </h1>
             <ul className="socialMedia">
-              {data.allContentfulSocialMedia.edges.map(({node}, index) => (
-                <li key={index} className={`socialMediaItem ${node.type}`}>
-                  <a href={node.url}>
-                    <img src={node.icon.file.url} className={`socialMediaImg ${node.type}`} alt={`${node.type} icon`} title={node.handle} />
+
+              {node.social_media.map((socialItem) => (
+                <li key={socialItem.id} className={`socialMediaItem ${socialItem.type}`}>
+                  <a href={socialItem.url}>
+                    <img src={socialItem.icon.file.url} className={`socialMediaImg ${socialItem.type}`} alt={`${socialItem.type} icon`} title={socialItem.handle} />
                   </a>
                 </li>
               ))}
+
             </ul>
           </div>
         </aside>

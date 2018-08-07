@@ -17,8 +17,8 @@
   display: flex;
 }
 .AuthorCard .profilePhoto {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 100%;
   margin-right: 10px;
 }
@@ -32,15 +32,20 @@
 .AuthorCard .socialMedia {
   display: flex;
   list-style-type: none;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
 }
 .AuthorCard .socialMedia .socialMediaImg {
-  height: 25px;
+  height: 30px;
   padding: 5px;
+  margin: 5px;
+  transition-duration: 1s;
 }
 .AuthorCard .socialMedia .socialMediaImg:hover {
   background-color: #56A5A8;
+  height: calc(30px + 5px);
+  margin: 0px;
 }
 
 /*# sourceMappingURL=layout.css.map */

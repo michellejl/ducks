@@ -1,8 +1,11 @@
 import React from 'react'
+import AuthorCard from '../components/author-card'
+
 
 const Header = ({ siteTitle }) => (
   <header>
-     <span className='siteTitle'>{siteTitle}</span>
+    <AuthorCard />
+     {/* <span className='siteTitle'>{siteTitle}</span> */}
   </header>
 )
 
