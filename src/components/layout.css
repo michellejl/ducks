@@ -12,19 +12,30 @@
   font-size: 2.25em;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+header > * {
+  min-width: 50vw;
+}
+
 /* Author Card */
 .AuthorCard {
   display: flex;
+  padding: 5px 5px 0;
 }
 .AuthorCard .profilePhoto {
   width: 75px;
   height: 75px;
   border-radius: 100%;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 .AuthorCard h1 {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 .AuthorCard h1 a {
   color: #56A5A8;
@@ -36,6 +47,10 @@
   margin: 0;
   padding: 0;
 }
+.AuthorCard .socialMedia .socialMediaItem {
+  padding: 0;
+  margin: 0;
+}
 .AuthorCard .socialMedia .socialMediaImg {
   height: 30px;
   padding: 5px;
@@ -46,6 +61,14 @@
   background-color: #56A5A8;
   height: calc(30px + 5px);
   margin: 0px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+nav a {
+  padding: 5px 10px;
 }
 
 /*# sourceMappingURL=layout.css.map */

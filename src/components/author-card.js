@@ -45,7 +45,7 @@ const AuthorCard = () => (
 
               {node.social_media.map((socialItem) => (
                 <li key={socialItem.id} className={`socialMediaItem ${socialItem.type}`}>
-                  <a href={socialItem.url}>
+                  <a href={socialItem.url} target="_blank">
                     <img src={socialItem.icon.file.url} className={`socialMediaImg ${socialItem.type}`} alt={`${socialItem.type} icon`} title={socialItem.handle} />
                   </a>
                 </li>

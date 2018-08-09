@@ -1,11 +1,13 @@
 import React from 'react'
 import AuthorCard from '../components/author-card'
+import Nav from '../components/nav'
 
 
 const Header = ({ siteTitle }) => (
   <header>
     <AuthorCard />
-     {/* <span className='siteTitle'>{siteTitle}</span> */}
+    <Nav />
+    {/* <span className='siteTitle'>{siteTitle}</span> */}
   </header>
 )
 
