@@ -1,7 +1,79 @@
+//  Variables
+$numOfLinks: 3;
+$linkFR: calc(100vw / #{$numOfLinks});
+$minWidth: calc(#{$numOfLinks} * 100px);
+
+
 nav {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background: $c-accent-faded;
   a {
-    padding: 5px 10px;
+    padding: 10px;
+    width: 50vw;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    transition: background-color 1s;
+    transition: color 0.5s;
+    img {
+      min-width: 25px;
+      width: 10%;
+      max-width: 50px;
+      margin: 5px 20px;
+    }
+    &:nth-of-type(1) {
+      background: $c-main-lighter;
+    }
+    &:nth-of-type(2) {
+      background: $c-main;
+    }
+    &:nth-of-type(3) {
+      background: $c-main-darker;
+    }
+    &:hover {
+      background: $c-accent;
+      color: white;
+    }
+  }
+}
+
+@media screen and (min-width: $minWidth) {
+  nav a {
+    width: $linkFR;
+  }
+}
+@media screen and (min-width: 600px) {
+  nav {
+    flex-wrap: nowrap;
+    a {
+      // !important is needed to override the specificity used about with nth-of-type(n)
+      background: white !important; 
+      border-bottom: 4px solid;
+      transition: background-color 1s;
+      &:nth-of-type(1) {
+        border-color: $c-main-lighter;
+        &:hover {
+          background: $c-main-lighter !important;
+        }
+      }
+      &:nth-of-type(2) {
+        border-color: $c-main;
+        &:hover {
+          background: $c-main !important;
+        }
+      }
+      &:nth-of-type(3) {
+        border-color: $c-main-darker;
+        &:hover {
+          background: $c-main-darker !important;
+        }
+      }
+      
+    }
   }
 }

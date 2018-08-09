@@ -7,7 +7,7 @@ $social-size-hover: calc(#{$social-size} + 5px);
 
 .AuthorCard {
   display: flex;
-  padding: 5px 5px 0;
+  padding: 10px;
   .profilePhoto {
     width: $profile-size;
     height: $profile-size;

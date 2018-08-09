@@ -5,9 +5,13 @@ import Nav from '../components/nav'
 
 const Header = ({ siteTitle }) => (
   <header>
+    <h1 className='siteTitle'>
+      <a href="/">
+        {siteTitle}
+      </a>
+    </h1>
     <AuthorCard />
     <Nav />
-    {/* <span className='siteTitle'>{siteTitle}</span> */}
   </header>
 )
 

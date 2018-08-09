@@ -12,19 +12,10 @@
   font-size: 2.25em;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-header > * {
-  min-width: 50vw;
-}
-
 /* Author Card */
 .AuthorCard {
   display: flex;
-  padding: 5px 5px 0;
+  padding: 10px;
 }
 .AuthorCard .profilePhoto {
   width: 75px;
@@ -65,10 +56,106 @@ header > * {
 
 nav {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background: #8399A1;
 }
 nav a {
-  padding: 5px 10px;
+  padding: 10px;
+  width: 50vw;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: background-color 1s;
+  transition: color 0.5s;
+}
+nav a img {
+  min-width: 25px;
+  width: 10%;
+  max-width: 50px;
+  margin: 5px 20px;
+}
+nav a:nth-of-type(1) {
+  background: #F6DDDF;
+}
+nav a:nth-of-type(2) {
+  background: #EEC9C8;
+}
+nav a:nth-of-type(3) {
+  background: #DF9C9D;
+}
+nav a:hover {
+  background: #56A5A8;
+  color: white;
+}
+
+@media screen and (min-width: calc(3 * 100px)) {
+  nav a {
+    width: calc(100vw / 3);
+  }
+}
+@media screen and (min-width: 600px) {
+  nav {
+    flex-wrap: nowrap;
+  }
+  nav a {
+    background: white !important;
+    border-bottom: 4px solid;
+    transition: background-color 1s;
+  }
+  nav a:nth-of-type(1) {
+    border-color: #F6DDDF;
+  }
+  nav a:nth-of-type(1):hover {
+    background: #F6DDDF !important;
+  }
+  nav a:nth-of-type(2) {
+    border-color: #EEC9C8;
+  }
+  nav a:nth-of-type(2):hover {
+    background: #EEC9C8 !important;
+  }
+  nav a:nth-of-type(3) {
+    border-color: #DF9C9D;
+  }
+  nav a:nth-of-type(3):hover {
+    background: #DF9C9D !important;
+  }
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header .AuthorCard {
+  display: none;
+}
+header .siteTitle {
+  margin: 5px 0 10px;
+  padding: 0;
+  text-align: center;
+}
+header .siteTitle a {
+  color: #56A5A8;
+}
+@media screen and (min-width: 600px) {
+  header {
+    flex-direction: row;
+  }
+  header .AuthorCard {
+    display: flex;
+  }
+  header .siteTitle {
+    display: none;
+  }
+  header > * {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=layout.css.map */
