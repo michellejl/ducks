@@ -4,7 +4,7 @@ import Nav from '../components/nav'
 
 
 const Header = ({ siteTitle }) => (
-  <header>
+  <header className="Header">
     <h1 className='siteTitle'>
       <a href="/">
         {siteTitle}

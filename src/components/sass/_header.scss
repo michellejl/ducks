@@ -1,9 +1,7 @@
-header {
+.Header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
   .AuthorCard {
     display: none;
   }

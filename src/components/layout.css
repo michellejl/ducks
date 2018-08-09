@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+.Header, .Main, .Footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* 
  * Typography Theme: stow-lake
  * Font Family matches the headerFontFamily
@@ -125,35 +130,33 @@ nav a:hover {
     background: #DF9C9D !important;
   }
 }
-header {
+.Header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
 }
-header .AuthorCard {
+.Header .AuthorCard {
   display: none;
 }
-header .siteTitle {
+.Header .siteTitle {
   margin: 5px 0 10px;
   padding: 0;
   text-align: center;
 }
-header .siteTitle a {
+.Header .siteTitle a {
   color: #56A5A8;
 }
 @media screen and (min-width: 600px) {
-  header {
+  .Header {
     flex-direction: row;
   }
-  header .AuthorCard {
+  .Header .AuthorCard {
     display: flex;
   }
-  header .siteTitle {
+  .Header .siteTitle {
     display: none;
   }
-  header > * {
+  .Header > * {
     width: 50%;
   }
 }
