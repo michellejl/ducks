@@ -13,6 +13,11 @@ $social-size-hover: calc(#{$social-size} + 5px);
     height: $profile-size;
     border-radius: 100%;
     margin: 0 10px 0 0;
+    filter: grayscale(100%);
+    transition: filter 1s;
+    &:hover {
+      filter: grayscale(0%);
+    }
   }
   h1 {
     margin: 0;

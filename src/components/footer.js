@@ -4,7 +4,7 @@ import AuthorCard from '../components/author-card'
 
 const Footer = () => (
   <footer className="Footer">
-    {/* <AuthorCard /> */}
+    <AuthorCard />
   </footer>
 )
 
