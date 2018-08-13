@@ -19,7 +19,7 @@ const AboutBio = () => (
     render={data => (
       <section className="bio aboutSection">
         <header>
-          <h1>About Me</h1>
+          <h1>About Michelle</h1>
         </header>
         <div className="aboutContent">
           {data.contentfulAuthor.bio.internal.content}

@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 
 import AboutSubSection from './about-sub-section'
+import Hr from '../components/hr'
 
 const AboutSection = () => (
   <StaticQuery
@@ -33,8 +34,9 @@ const AboutSection = () => (
             </div>
           </section>
           <div className="about-grid">
-            <AboutSubSection />
+            <AboutSubSection section={node.title} />
           </div>
+          <Hr />
         </div>
       ))
     )}

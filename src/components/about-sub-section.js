@@ -1,11 +1,11 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 
-const AboutSubSection = () => (
+const AboutSubSection = ({section}) => (
   <StaticQuery
     query={graphql`
       query {
-        allContentfulAboutDetails(filter: {subSection : {title:{eq:"Community Involvement"}}}) {
+        allContentfulAboutDetails(filter: {subSection : {title:{eq: "Community Involvement"}}}) {
           edges {
             node {
               title
