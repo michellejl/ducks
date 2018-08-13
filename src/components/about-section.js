@@ -1,6 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 
+import AboutSubSection from './about-sub-section'
+
 const AboutSection = () => (
   <StaticQuery
     query={graphql`
@@ -12,46 +14,29 @@ const AboutSection = () => (
               content {
                 content
               }
-              about_details {
-                title
-                content {
-                  content
-                }
-              }
             }
           }
         }
       }
     `}
     render={data => (
-      <div>
-        {data.allContentfulAboutDetails.edges.map(({node}) => (
+      data.allContentfulAboutDetails.edges.map(({node}) => (
+        <div>
           <section className="aboutSection">
             <header>
               <h1>
                 {node.title}
               </h1>
             </header>
-            <div>
+            <div className="aboutContent">
               {node.content.content}
             </div>
-            {node.about_details ? (
-              <div>
-                {node.about_details.map((node) => (
-                  <section className="aboutSubSection">
-                    <p>
-                      <span className="title">{node.title}</span>
-                      {node.content.content}
-                    </p>
-                  </section>
-                ))}
-              </div>
-              ) : (
-              <p>hello</p>
-            )}
           </section>
-        ))}
-      </div>
+          <div className="about-grid">
+            <AboutSubSection />
+          </div>
+        </div>
+      ))
     )}
   />
 )

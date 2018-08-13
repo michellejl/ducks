@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  text-align: justify;
 }
 
 .Header, .Main, .Footer {
@@ -27,15 +28,9 @@
 }
 
 .hr {
-  margin: 15px -15px;
-  width: 100vw;
+  margin: 15px 0 0;
+  width: 100%;
   max-width: 1200px;
-}
-@media (min-width: 1200px) {
-  .hr {
-    margin: 15px 0;
-    width: 100%;
-  }
 }
 .hr span {
   display: inline-block;
@@ -201,21 +196,26 @@ nav a:hover {
   }
 }
 
-.about {
+.about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 25px;
 }
 @media (min-width: 600px) {
-  .about .hr {
+  .about-grid .hr {
     display: none;
   }
 }
 
+.bio.aboutSection {
+  margin: 0 auto 0 0;
+}
+
 .aboutSection {
   font-size: 0.9em;
-  text-align: justify;
   padding-top: 20px;
+  max-width: 790px;
+  margin: 0 auto;
 }
 .aboutSection header {
   display: inline-block;
@@ -223,30 +223,31 @@ nav a:hover {
 }
 .aboutSection header h1 {
   margin: 0 0 -7px;
-  padding: 0;
+  padding: 0 5px 0 0;
   font-size: 1.3em;
 }
-.aboutSection div {
+.aboutSection .aboutContent {
   margin-left: 10px;
 }
-.aboutSection .aboutSubSection {
-  padding: 10px 0 0;
+
+.aboutSubSection {
+  padding: 10px 0 0 10px;
 }
-.aboutSection .aboutSubSection .title {
+.aboutSubSection .title {
   margin: 0;
   padding: 0 10px 0 0;
   display: block;
   font-weight: bold;
 }
 @media (min-width: 300px) {
-  .aboutSection .aboutSubSection .title {
+  .aboutSubSection .title {
     display: inline-block;
   }
-  .aboutSection .aboutSubSection .title:after {
+  .aboutSubSection .title:after {
     content: " => ";
   }
 }
-.aboutSection .aboutSubSection p {
+.aboutSubSection p {
   display: inline-block;
 }
 

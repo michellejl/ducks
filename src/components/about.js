@@ -1,6 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 
+import Hr from '../components/hr'
+
 const AboutBio = () => (
   <StaticQuery
     query={graphql`
@@ -19,9 +21,10 @@ const AboutBio = () => (
         <header>
           <h1>About Me</h1>
         </header>
-        <div>
+        <div className="aboutContent">
           {data.contentfulAuthor.bio.internal.content}
         </div>
+        <Hr />
       </section>
     )}
   />

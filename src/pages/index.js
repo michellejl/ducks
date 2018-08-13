@@ -7,11 +7,8 @@ import Hr from '../components/hr'
 
 const IndexPage = () => (
   <Layout>
-    <div className="about">
-      <AboutBio />
-      <AboutSection />
-    </div>
-    <Hr />
+    <AboutBio />
+    <AboutSection />
   </Layout>
 )
 

@@ -1,6 +1,6 @@
-.about {
+.about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 25px;
   @media (min-width: 600px) {
     .hr {
@@ -8,39 +8,45 @@
     }
   }
 }
-
+.bio.aboutSection {
+  margin: 0 auto 0 0;
+}
 .aboutSection {
   font-size: .9em;
-  text-align: justify;
   padding-top: 20px;
+  max-width: 790px;
+  margin: 0 auto;
+  // @media (min-width: 1200px) {
+  //   margin: 0 0 0 auto;
+  // }
   header {
     display: inline-block;
     border-bottom: 8px solid $c-main;
     h1 {
       margin: 0 0 -7px;
-      padding: 0;
+      padding: 0 5px 0 0;
       font-size: 1.3em;
     }
   }
-  div {
+  .aboutContent {
     margin-left: 10px;
-  }
-  .aboutSubSection {
-    padding: 10px 0 0;
-    .title {
-      margin: 0;
-      padding: 0 10px 0 0;
-      display: block;
-      font-weight: bold;
-      @media (min-width: 300px) {
-        display: inline-block;
-        &:after {
-          content: ' => ';
-        }
+  } 
+}
+.aboutSubSection {
+  padding: 10px 0 0 10px;
+  .title {
+    margin: 0;
+    padding: 0 10px 0 0;
+    display: block;
+    font-weight: bold;
+    @media (min-width: 300px) {
+      display: inline-block;
+      &:after {
+        content: ' => ';
       }
     }
-    p {
-      display: inline-block;
-    }
+  }
+  p {
+    display: inline-block;
   }
 }
