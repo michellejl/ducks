@@ -1,0 +1,27 @@
+$third: calc(100% / 3);
+
+
+.hr {
+  // -15px for lr margin comes from layout.scss padding under .Main
+  margin: 15px -15px;
+  width: 100vw;
+  max-width: $Main-max-width;
+  @media (min-width: $Main-max-width) {
+    margin: 15px 0;
+    width: 100%;
+  }
+  span {
+    display: inline-block;
+    height: 10px;
+    width: $third;
+  }
+  .left {
+    background-color: $c-main-lighter;
+  }
+  .center {
+    background-color: $c-main;
+  }
+  .right {
+    background-color: $c-main-darker;
+  }
+}

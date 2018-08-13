@@ -1,10 +1,20 @@
+$Main-lr-padding: 10px;
+$Main-max-width: 1200px;
+
 * {
   box-sizing: border-box;
 }
 
 .Header, .Main, .Footer {
-  max-width: 1200px;
+  max-width: $Main-max-width;
   margin: 0 auto;
+}
+
+.Main {
+  padding: 50px $Main-lr-padding 0;
+  @media (min-width: $Main-max-width) {
+    padding: 50px 0 0;
+  }
 }
 
 // Global
@@ -13,10 +23,16 @@
 
 // ************************* Components ************************ //
 
+// Spacing
+@import "hr";
+
 // Header
 @import "author-card"; // Header AND Footer
 @import "nav";
 @import "header";
+
+// About Sections
+@import "about";
 
 // Footer
 @import "footer";

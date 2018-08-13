@@ -40,7 +40,7 @@ $social-size-hover: calc(#{$social-size} + 5px);
     .socialMediaImg {
       height: $social-size;
       padding: 5px;
-      margin: 5px;
+      margin: 0;
       transition-duration: 1s;
       &:hover {
         background-color: $c-accent;
