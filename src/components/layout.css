@@ -251,6 +251,54 @@ nav a:hover {
   display: inline-block;
 }
 
+.hobbiesContainer .hobbiesDescription {
+  font-size: 0.9em;
+  padding-top: 20px;
+  max-width: 790px;
+  margin: 0 0 0 auto;
+}
+.hobbiesContainer .hobbiesDescription header {
+  display: inline-block;
+  border-bottom: 8px solid #EEC9C8;
+}
+.hobbiesContainer .hobbiesDescription header h1 {
+  margin: 0 0 -7px;
+  padding: 0 5px 0 0;
+  font-size: 1.3em;
+}
+.hobbiesContainer .hobbiesDescription .hobbiesDescriptionContent {
+  margin-left: 10px;
+}
+
+.hobbies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  background-color: #fbf3f3;
+  padding: 15px;
+}
+.hobbies .hobby {
+  padding: 10px 0 0;
+  background: #fefefe;
+}
+.hobbies .hobby img {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+.hobbies .hobby h2 {
+  margin: 0;
+  text-align: center;
+  color: #DF9C9D;
+  font-size: 1.3em;
+  border-bottom: 2px solid #F6DDDF;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
+.hobbies .hobby p {
+  padding: 5px;
+}
+
 .Footer {
   display: flex;
   justify-content: center;
