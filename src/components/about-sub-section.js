@@ -1,6 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from "gatsby"
 
+// One day this will allow variables so that I don't need to have the string "Community Involvement" hard coded here and I will be able to have lots of different sections/subsections all sharing components.... in the mean time... I will cry a little bit.
+
 const AboutSubSection = ({section}) => (
   <StaticQuery
     query={graphql`
